@@ -1,0 +1,24 @@
+<h1>inicio</h1>
+
+<p>
+  <ul>
+    <li>cuadro texto</li>
+    <li>register - login</li>
+  </ul>
+</p>
+
+
+<div class="ctext" id="all_posters">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br>
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <br>
+    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <br>
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in <br>
+     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur <br>
+     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt <br>
+      mollit anim id est laborum.</p>
+</div>
+
+<%= form_with(model: Poster.new) do |f| %>
+  <%= f.text_field :content %>
+  <%= f.submit :crear %>
+<% end %>
