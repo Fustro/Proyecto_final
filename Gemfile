@@ -14,6 +14,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 
 gem 'devise'
+gem 'activeadmin'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

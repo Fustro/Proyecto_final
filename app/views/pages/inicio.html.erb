@@ -1,24 +1,38 @@
 <h1>inicio</h1>
 
-<p>
-  <ul>
-    <li>cuadro texto</li>
-    <li>register - login</li>
-  </ul>
-</p>
+<div class="cont_txt">
+  <div class="ctext" id="all_posters">
 
+    <p>[~]Bienvenidos a Dixert! Este es el nodo Principal, donde te encontraras con toda la información compartida por usuarios registrados, visitas, y usuarios Premium. [~]<br>
+[~]Cada usuario que se registre tendrá la posibilidad de asegurar sus párrafos escritos a travez de un asegurador de párrafos [~]<br>
+[]Esto permite que los párrafos anteriores no sean borrado por otros usuarios. En cambio las visitas solo podrán integrar una puerta que simplemente no protege nada de lo anterior.[]<br>
+[~][~]Un Usuario Premium puede compartir información doblemente asegurado si lo desea, a la vez puede dirigir a nuevos nodos {$~1.50~} cobrando por el Acceso a su nodo  [~][~]<br>
+[~] O también puedes encontrarte con con nodos de libre Acceso {$~~} Donde te dirige a un nodo en especifico [~]</p>
 
-<div class="ctext" id="all_posters">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br>
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <br>
-    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <br>
-     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in <br>
-     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur <br>
-     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt <br>
-      mollit anim id est laborum.</p>
+    <div class="nuevo_post">
+      <% @poster.each do |post| %>
+     <%= post.content %>
+     <% end %>
+    </div>
+
+  </div>
+
+  <div class="textin">
+
+      <%= form_with(model: Poster.new) do |f| %>
+      <%= f.text_field :content, size: 68 %>
+      <%= f.submit :crear %>
+      <% end %>
+
+  </div>
+
 </div>
+<div class="ctools">
 
-<%= form_with(model: Poster.new) do |f| %>
-  <%= f.text_field :content %>
-  <%= f.submit :crear %>
-<% end %>
+  <div class="innertool">
+
+    <%= render 'shared/navbar-tool' %>
+    <%= render 'tools/tools' %>
+
+  </div>
+</div>

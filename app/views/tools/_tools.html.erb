@@ -1,0 +1,36 @@
+<div class="cont">
+<br>
+  <h6>Buscar:</h6>
+  <input type="text" name="buscar">
+  <br><br>
+  <button type="button" name="buscar_palabra">Buscar</button>
+<br>
+<br>
+<h6>Seleccionar Nodo:</h6>
+<br>
+
+<% if user_signed_in? %>
+  <select name="Nodo" id="nodo_id">
+  <option value="">Seleccione un nodo</option>
+  <option value="Nodo_visita">Visita</option>
+  <option value="Nodo_registrado">Registred</option>
+  <option value="Nodo_premium">Premium</option>
+<% else %>
+  <select name="Nodo" id="nodo_id">
+  <option value="">Seleccione un nodo</option>
+  <option value="Nodo_visita">Visita</option>
+<% end %>
+
+</select>
+<br>
+<br>
+<h6>Encifrador</h6>
+<input type="text" name="encrypter">
+<br>
+<h6>Desencifrador</h6>
+<input type="text" name="dencrypter">
+<br><br>
+<button type="button" name="btn_encifrar">Encifrar</button>
+<button type="button" name="btn_decifrar">Decifrar</button>
+
+</div>
