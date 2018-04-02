@@ -1,38 +1,33 @@
 <h1>inicio</h1>
 
-<div class="cont_txt">
-  <div class="ctext" id="all_posters">
-
-    <p>[~]Bienvenidos a Dixert! Este es el nodo Principal, donde te encontraras con toda la información compartida por usuarios registrados, visitas, y usuarios Premium. [~]<br>
-[~]Cada usuario que se registre tendrá la posibilidad de asegurar sus párrafos escritos a travez de un asegurador de párrafos [~]<br>
-[]Esto permite que los párrafos anteriores no sean borrado por otros usuarios. En cambio las visitas solo podrán integrar una puerta que simplemente no protege nada de lo anterior.[]<br>
-[~][~]Un Usuario Premium puede compartir información doblemente asegurado si lo desea, a la vez puede dirigir a nuevos nodos {$~1.50~} cobrando por el Acceso a su nodo  [~][~]<br>
-[~] O también puedes encontrarte con con nodos de libre Acceso {$~~} Donde te dirige a un nodo en especifico [~]</p>
-
-    <div class="nuevo_post">
-      <% @poster.each do |post| %>
-     <%= post.content %>
-     <% end %>
+<div class="cont_txt" style="overflow-y: auto;">
+  <div>
+    <div class="ctext" id="all_posters">
+          <p>[~]Bienvenidos a Dixert! Este es el nodo Principal, donde te encontraras con toda la información compartida por usuarios registrados, visitas, y usuarios Premium. [~]<br>
+          [~]Cada usuario que se registre tendrá la posibilidad de asegurar sus párrafos escritos a travez de un asegurador de párrafos [~]<br>
+          []Esto permite que los párrafos anteriores no sean borrado por otros usuarios. En cambio las visitas solo podrán integrar una puerta que simplemente no protege nada de lo anterior.[]<br>
+          [~][~]Un Usuario Premium puede compartir información doblemente asegurado si lo desea, a la vez puede dirigir a nuevos nodos {$~1.50~} cobrando por el Acceso a su nodo  [~][~]<br>
+          [~] O también puedes encontrarte con con nodos de libre Acceso {$~~} Donde te dirige a un nodo en especifico [~]</p>
+      <div class="nuevo_post">
+        <%= render @posters %>
+      </div>
     </div>
-
   </div>
-
   <div class="textin">
-
       <%= form_with(model: Poster.new) do |f| %>
       <%= f.text_field :content, size: 68 %>
+      <%= check_box(:encrypt,:decrypt)%>
       <%= f.submit :crear %>
       <% end %>
-
   </div>
-
 </div>
 <div class="ctools">
-
   <div class="innertool">
-
-    <%= render 'shared/navbar-tool' %>
-    <%= render 'tools/tools' %>
-
+    <div class="tools">
+      <%= render 'shared/navbar-tool' %>
+    </div>
+    <div class="content-tools">
+      <%= render 'tools/tools' %>
+    </div>
   </div>
 </div>

@@ -1,0 +1,2 @@
+module NodoHelper
+end

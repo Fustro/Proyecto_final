@@ -1,11 +1,21 @@
 class PostersController < ApplicationController
 
   def index
-    @poster = Poster.all
+
   end
 
   def create
     @poster = Poster.create(poster_params)
+  end
+
+
+  def poster_search
+    @buscar = params[:buscar]
+    if @buscar.present?
+      @posters = Poster.where(content: @buscar)
+    else
+      @posters = Poster.all
+    end
   end
 
   private

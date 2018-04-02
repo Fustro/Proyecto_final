@@ -1,16 +1,28 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
+  get 'nodo/nodo1'
+
+  root 'pages#inicio'
+
   get 'pages/inicio'
 
   get 'pages/crear'
 
-  devise_for :users
+  get 'posters/poster_search'
 
-  root 'pages#inicio'
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  devise_for :user, controllers: {
+             registrations: 'user/registrations',
+             sessions: 'user/sessions',
+             omniauth_callbacks: 'user/omniauth_callbacks'
+      }
 
   resources :posters
 
   resources :nodos, only: [:show, :edit, :new]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
 end

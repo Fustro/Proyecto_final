@@ -9,10 +9,6 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'de8521d6cef9dc29926efc6ddd474fa9b7c45cdfe40cee69429358963b0ae34aeea2a5991b71e855c9fb8453d3dcba40456a5a8042b36da80e3f81304afba5bd'
-  
-  # ==> Controller configuration
-  # Configure the parent class to the devise controllers.
-  # config.parent_controller = 'DeviseController'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -256,7 +252,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :facebook, '201475110455490', '92a9d5d4ea1b97ecccadcde7b54d0cca'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
