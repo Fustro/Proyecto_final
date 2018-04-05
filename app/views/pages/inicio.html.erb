@@ -16,7 +16,7 @@
   <div class="textin">
       <%= form_with(model: Poster.new) do |f| %>
       <%= f.text_field :content, size: 68 %>
-      <%= check_box(:encrypt,:decrypt)%>
+      <%= check_box_tag :encrypted %>
       <%= f.submit :crear %>
       <% end %>
   </div>
@@ -31,3 +31,11 @@
     </div>
   </div>
 </div>
+
+<script>
+
+$('@posters').onclick(function(){
+  $('@posters').append("  ")
+})
+
+</script>

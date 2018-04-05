@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
   get 'nodo/nodo1'
 
-  root 'pages#inicio'
+  root 'pages#portada'
 
   get 'pages/inicio'
 
   get 'pages/crear'
 
   get 'posters/poster_search'
+
+  get 'pages/add_password'
 
 
   devise_for :admin_users, ActiveAdmin::Devise.config
