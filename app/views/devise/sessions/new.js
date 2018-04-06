@@ -1,1 +1,1 @@
-$('#usuario').append(<%= j render 'devise/session/new' %>)
+$('#registrado').append(<%= j render 'devise/session/new' %>)

@@ -8,15 +8,16 @@
           []Esto permite que los párrafos anteriores no sean borrado por otros usuarios. En cambio las visitas solo podrán integrar una puerta que simplemente no protege nada de lo anterior.[]<br>
           [~][~]Un Usuario Premium puede compartir información doblemente asegurado si lo desea, a la vez puede dirigir a nuevos nodos {$~1.50~} cobrando por el Acceso a su nodo  [~][~]<br>
           [~] O también puedes encontrarte con con nodos de libre Acceso {$~~} Donde te dirige a un nodo en especifico [~]</p>
+
       <div class="nuevo_post">
         <%= render @posters %>
       </div>
+
     </div>
   </div>
   <div class="textin">
       <%= form_with(model: Poster.new) do |f| %>
       <%= f.text_field :content, size: 68 %>
-      <%= check_box_tag :encrypted %>
       <%= f.submit :crear %>
       <% end %>
   </div>
@@ -33,9 +34,17 @@
 </div>
 
 <script>
+  var posters = $('.poster_detail');
+    posters.on('click', function(){
+      var poster = $(this);
+      var content = poster.text();
 
-$('@posters').onclick(function(){
-  $('@posters').append("  ")
-})
+      $('[name="poster[content]"]').val(content);
+
+
+
+
+
+    });
 
 </script>

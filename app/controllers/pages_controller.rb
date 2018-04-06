@@ -9,17 +9,12 @@ class PagesController < ApplicationController
       @password = params[:encrypt]
       @docrypt = params[:encrypted]
 
-      if @docrypt
-
-      else
-
-      end
+      
 
   end
 
   def desblock
 
-    
 
 
   end

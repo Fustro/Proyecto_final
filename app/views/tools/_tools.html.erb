@@ -27,9 +27,18 @@
     </select>
 <br>
 <br>
-<h6>Deencifrador</h6>
 
-<%= password_field(:encrypt, :password, size: 20) %>
+<% if user_signed_in? %>
 
-<%= button_tag 'encryptar' %>
+  <h6>Deencifrador</h6>
+  <br>
+  <%= password_field(:encrypt, :password, size: 20) %>
+  <br>
+  encriptar?
+
+  <%= check_box_tag :encrypted %>
+
+<% end %>
+
+
 </div>

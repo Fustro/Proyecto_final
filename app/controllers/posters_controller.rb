@@ -4,6 +4,10 @@ class PostersController < ApplicationController
 
   end
 
+  def new
+    @poster = Poster.new
+  end
+
   def create
     @poster = Poster.create(poster_params)
   end
