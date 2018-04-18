@@ -12,6 +12,10 @@ class PostersController < ApplicationController
     @poster = Poster.create(poster_params)
   end
 
+  def destroy
+    @poster = Poster.destroy(@poster.id)
+  end
+
 
   def poster_search
     @buscar = params[:buscar]

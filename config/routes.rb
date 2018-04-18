@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 
   get 'pages/add_password'
 
+  get 'pages/usuarios_registrados_nodo'
+
+
+
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

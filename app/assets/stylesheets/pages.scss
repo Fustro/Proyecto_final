@@ -2,47 +2,104 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
-  background-color: rgba(#022c3e, 1);
+  height: 100%;
+  background-color: rgba(#181c29, 1);
   color: white;
 }
+
+#all_posters{
+  padding: 5px;
+  background-color: rgba(#00e9ff, 0.23);
+}
+
 
 .contenedor{
   text-align: center;
-
+  height: 100%;
 }
 
 .bloque{
-  height: 300px;
-  width: 400px;
+  height: 700px;;
+  width: 30%;
+  padding: 1%;
+  margin-top: 100px;;
   text-align: center;
   display: inline-block;
   margin-left: 30px;
+  background-color: #9dc8c8;
+}
+
+#registrados{
+background-color: #9ba446;
+}
+
+#premium{
+  background-color: #424c58;
 }
 
 .cont_txt{
-  width: 700px;
+  width: 45%;
   height: 500px;
   background-color: rgba(#0e4b73, 1);
-  margin-left: 30px;
   display: inline-block;
-  color: white;
- position: absolute;
+  margin-left: 40px;
+
 }
 
 .ctools{
-  width: 700px;
+  width: 45%;
   height: 500px;
   background-color: #e7ecf6;
-  display: inline-block;
-  position: absolute;
-  top: 40;
-  left: 800px;
   color: black;
   text-align: center;
-
+  display: inline-block;
+  margin-left: 40px;
+  position: absolute;
 }
 
 .textin{
   position: relative;
-  bottom: 0;
+
+  left: 0;
+}
+
+.cr{
+
+  text-align: center;
+  margin-top: 25%;
+}
+
+
+.bar-t{
+  height: 70px;
+  background-color: rgb(62, 63, 66);
+  padding-top: 10px;
+}
+
+
+.btne{
+  margin: 7%;
+  padding: 6%;
+  width: 200px;
+  height: 100px;
+  font-size: 2em;
+  background-color: rgba(#174abb, 0.91);
+}
+
+
+
+
+@media(max-width: 1000px){
+
+
+.ctools{
+position: relative;
+width: 90%;
+}
+
+.cont_txt{
+    width: 90%;
+  }
+
+
 }

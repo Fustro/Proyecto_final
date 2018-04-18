@@ -17,6 +17,7 @@ gem 'devise'
 gem 'activeadmin'
 gem 'jquery-rails'
 gem 'omniauth-facebook'
+gem 'cancan'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
